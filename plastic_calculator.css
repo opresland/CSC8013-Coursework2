@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&family=EB+Garamond&family=Special+Elite&display=swap');/*********************** Page variables ***********************/
+
+/*********************** Page variables ***********************/
+
+html {
+    /* modular scale */
+    --factor: 1.4;
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--factor));
+    --s2: calc(var(--s1) * var(--factor));
+    --s3: calc(var(--s2) * var(--factor));
+    --s4: calc(var(--s3) * var(--factor));
+    --s5: calc(var(--s4) * var(--factor));
+    --s-1: calc(var(--s0) / var(--factor));
+    --s-2: calc(var(--s-1) / var(--factor));
+    --s-3: calc(var(--s-2) / var(--factor));
+    --s-4: calc(var(--s-3) / var(--factor));
+    --s-5: calc(var(--s-4) / var(--factor));
+}
+
+/*********************** Page layout ***********************/
+
+/* Special Case - narrow display */
+@media screen and (max-width:715px){
+
+    html{
+        --factor: 1.1;
+    }
+
+    body header{
+        min-height: 10rem;
+        background-size: cover;
+    }
+
+    body main{
+        margin: 50px 12px 0 12px;
+        font-size: var(--s0);
+    }
+
+    header h1{
+        top:50%;
+        font-size: var(--s2);
+    }
+
+    footer{
+        background-size: cover;
+    }
+
+    td {
+        width: auto;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    max-width: 63ch;
+    margin: 50px auto 0 auto;
+    font-family: 'Special Elite', cursive;
+    font-size: var(--s0);
+}
+
+header{
+    min-height: 20rem;
+    position: relative;
+    background-image: url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+}
+
+footer{
+    padding: 60px;
+    background-image: url("http://homepages.cs.ncl.ac.uk/harold.fellermann/csc8018/ocean_cleanup/resources/ocean.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 100%;
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+/*********************** Header formatting ***********************/
+
+/* Placing main heading in centre */
+h1{
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: var(--s3);
+    color: white;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.2);;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/*********************** Main formatting ***********************/
+h2{
+    margin-top: 3rem;
+}
+
+P{
+    margin-top: 1rem;
+    font-family: 'EB Garamond', serif;
+}
+
+/*********************** Content specific formatting ***********************/
+/* table */
+table{
+    width: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    font-family: "EB Garamond", serif;
+    alignment: center;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid black;
+}
+
+td{
+
+    width: 57%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+#household td{
+    width: 95%;
+}
+
+span{
+    font-weight: bold;
+}
+
+
+/*********************** Footer formatting ***********************/
+footer p a{
+    text-decoration: none;
+    font-family: 'Darker Grotesque', sans-serif;
+    color: black;
+    font-size: var(--s1);
+}
